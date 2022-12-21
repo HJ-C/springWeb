@@ -25,4 +25,14 @@ public class Article {
     @Column
     private String content;
 
+
+    //수정할때 null값이 아닐때 작동
+    public void patch(Article article) {
+        if(article.title != null){
+            this.title = article.title;
+        }
+        if(article.content != null){
+            this.content = article.content;
+        }
+    }
 }
